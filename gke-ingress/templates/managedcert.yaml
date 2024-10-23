@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: {{ include "gke-ingress.fullname" . }}
+spec:
+  domains:
+    - app.gke-ingress.dev
+    - www.app.gke-ingress.dev
